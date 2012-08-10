@@ -2,6 +2,12 @@
 
 mediawiki_cli is a command line interface tool for MediaWiki. 
 
+## Installation
+
+	gem  install mediawiki_cli
+
+## Usage
+
 All mediawiki_cli commands require configuration options to be passed at run-time.  
 
 		mw <action> <subcommand> <options> -W <wiki> 
@@ -18,7 +24,7 @@ Actions:
 * import
 * xml
 
-## Listing 
+### Listing 
 To retrieve a list of MediaWiki resources:
 
 		mw list [resource_subcommand] [options] -W [wiki]
@@ -34,7 +40,7 @@ Subcommands:
    * -n, --namespaces 	=> A list of namespace names (eg, `mw list members -n "Property:"`)
    * -f, --file  				=> A hashable file (eg, YAML) that contains keys for "categories" and "namespaces"
 
-## Exporting 
+### Exporting 
 MediaWiki export files will conform to the MediaWiki XML Schema.  The 'export' subcommand accepts input from standard input, such as from piped command output.
 
 To export MediaWiki resources:
@@ -50,12 +56,12 @@ Subcommands:
    * -p, --pages 				=> A list of page names that will be exported (eg, `mw export batch -p "Main Page" "My Other Page" -W [wiki]`)
    * -f, --file 				=> A hashable file (eg, YAML) that contains keys for "categories", "namespaces", and "pages"
 
-## Importing
+### Importing
 Import a MediaWiki XML export file to the specified wiki.
 
 		mw import [*files] -W [wiki]
 
-## Xml
+### Xml
 It may be necessary to perform XML manipulation for the MediaWiki XML files.  
 
 		mw xml [subcommand] [options] -W [wiki]
