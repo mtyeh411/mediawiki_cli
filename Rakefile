@@ -17,10 +17,12 @@ Jeweler::Tasks.new do |gem|
   gem.name = "mediawiki_cli"
   gem.homepage = "http://github.com/mtyeh411/mediawiki_cli"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{A command line interface for MediaWiki}
+  gem.description = %Q{A command line interface for MediaWiki that offers listing, exporting, and importing features.}
   gem.email = "mtyeh411@gmail.com"
   gem.authors = ["Matt Yeh"]
+	gem.files = FileList["[A-Z]*.*","{lib,bin}/**/*"]
+	gem.executables << 'mw'
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -30,14 +32,6 @@ Rake::TestTask.new(:test) do |test|
   test.libs << 'lib' << 'test'
   test.pattern = 'test/**/test_*.rb'
   test.verbose = true
-end
-
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-  test.rcov_opts << '--exclude "gems/*"'
 end
 
 task :default => :test
