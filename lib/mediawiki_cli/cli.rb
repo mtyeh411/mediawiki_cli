@@ -17,8 +17,8 @@ module Mw
 		class_option :password, :type=>:string, :aliases=>"-P"
 		class_option :file, :type=>:string, :aliases=>"-F"
 
-		desc "setup", "setup"
-		def setup
+		desc "connect", "connect"
+		def connect 
 			config = symbolize_keys(to_hash(options.file)).fetch(options.wiki.to_sym) if options.file
 
 			config ||= options
