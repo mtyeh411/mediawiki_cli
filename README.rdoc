@@ -28,9 +28,9 @@ Subcommands:
 * all 								=> (default) List all categories, properties, and templates.
 * namespaces
 * members
-	* -c, --categories 	=> A list of category names (eg, mw list members -n "Category:Foo" "Category:Bar")
-	* -n, --namespaces 	=> A list of namespace names (eg, mw list members -n "Property:")
-	* -f, --file  				=> A hashable file (eg, YAML) that contains keys for "categories" and "namespaces"
+  * -c, --categories 	=> A list of category names (eg, mw list members -n "Category:Foo" "Category:Bar")
+  * -n, --namespaces 	=> A list of namespace names (eg, mw list members -n "Property:")
+  * -f, --file  				=> A hashable file (eg, YAML) that contains keys for "categories" and "namespaces"
 
 == Exporting 
 MediaWiki export files will conform to the MediaWiki XML Schema.  The 'export' subcommand accepts input from standard input, such as from piped command output.
@@ -40,12 +40,12 @@ To export MediaWiki resources:
 
 Subcommands:
 * export 							=> (default) 
-** -p, --pages 				=> A list of page names to export (eg, mw export -p "Main Page" "My Other Page")
+  * -p, --pages 				=> A list of page names to export (eg, mw export -p "Main Page" "My Other Page")
 * batch
-	* -c, --categories 	=> A list of category names whose members will be exported (eg, mw export batch -c "Category:Foo" "Category:Bar" -W [wiki])
-	* -n, --namespaces 	=> A list of namespace names that will be exported (eg, mw export batch -n "Property:" "Concept:" -W [wiki])
-	* -p, --pages 				=> A list of page names that will be exported (eg, mw export batch -p "Main Page" "My Other Page" -W [wiki])
-	* -f, --file 				=> A hashable file (eg, YAML) that contains keys for "categories", "namespaces", and "pages"
+  * -c, --categories 	=> A list of category names whose members will be exported (eg, mw export batch -c "Category:Foo" "Category:Bar" -W [wiki])
+  * -n, --namespaces 	=> A list of namespace names that will be exported (eg, mw export batch -n "Property:" "Concept:" -W [wiki])
+  * -p, --pages 				=> A list of page names that will be exported (eg, mw export batch -p "Main Page" "My Other Page" -W [wiki])
+  * -f, --file 				=> A hashable file (eg, YAML) that contains keys for "categories", "namespaces", and "pages"
 
 == Importing
 Import a MediaWiki XML export file to the specified wiki.
