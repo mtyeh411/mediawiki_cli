@@ -50,12 +50,12 @@ Subcommands:
    * -p, --pages 				=> A list of page names that will be exported (eg, `mw export batch -p "Main Page" "My Other Page" -W [wiki]`)
    * -f, --file 				=> A hashable file (eg, YAML) that contains keys for "categories", "namespaces", and "pages"
 
-== Importing
+## Importing
 Import a MediaWiki XML export file to the specified wiki.
 
 		mw import [*files] -W [wiki]
 
-== Xml
+## Xml
 It may be necessary to perform XML manipulation for the MediaWiki XML files.  
 
 		mw xml [subcommand] [options] -W [wiki]
