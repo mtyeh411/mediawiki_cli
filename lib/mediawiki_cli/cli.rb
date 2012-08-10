@@ -3,7 +3,6 @@
 require 'media_wiki'
 require 'mediawiki_cli/list'
 require 'mediawiki_cli/export'
-#require 'mediawiki_cli/import'
 require 'mediawiki_cli/xml'
 require 'thor'
 
@@ -41,9 +40,6 @@ module Mw
 
 		desc "export", "export"
 		subcommand "export", Export
-
-#		desc "import", "import"
-#		subcommand "import", Import
 
 		desc "xml", "xml"
 		subcommand "xml", Xml
