@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "mediawiki_cli"
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matt Yeh"]
@@ -26,7 +26,6 @@ Gem::Specification.new do |s|
     "lib/mediawiki_cli/cli.rb",
     "lib/mediawiki_cli/export.rb",
     "lib/mediawiki_cli/filehandler.rb",
-    "lib/mediawiki_cli/import.rb",
     "lib/mediawiki_cli/list.rb",
     "lib/mediawiki_cli/mwgateway.rb",
     "lib/mediawiki_cli/xml.rb"
