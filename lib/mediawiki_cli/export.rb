@@ -39,10 +39,6 @@ include MwGateway, FileHandler
 	method_option :pages, :type=>:array, :aliases=>"-p", :required=>true
 	def export
 		create_gateway
-#		invoke "mw:connect", [], :wiki => parent_options.wiki, 
-#																:username => parent_options.username,
-#																:password => parent_options.password,
-#																:file => parent_options.file
 		opts = (STDIN.tty?) ? options.pages : $stdin.read.split("\n")
 		return output $mw.export(opts)
 	end

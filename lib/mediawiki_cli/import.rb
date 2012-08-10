@@ -8,9 +8,9 @@ include MwGateway
 
 	desc "import", "Import pages from file."
 	def import(*file)
-		create_gateway(wiki)
+		create_gateway
 		file.each { |f|
-			$mw.import(file)
+			$mw.import(f)
 		}
 	end
 end

@@ -3,7 +3,7 @@
 require 'media_wiki'
 require 'mediawiki_cli/list'
 require 'mediawiki_cli/export'
-require 'mediawiki_cli/import'
+#require 'mediawiki_cli/import'
 require 'mediawiki_cli/xml'
 require 'thor'
 
@@ -28,14 +28,22 @@ module Mw
 			end
 		end
 
+		desc "import", "Import pages from file."
+		def import(*file)
+			connect
+			file.each { |f|
+				$mw.import(f)
+			}
+		end
+
 		desc "list", "list"
 		subcommand "list", List 
 
 		desc "export", "export"
 		subcommand "export", Export
 
-		desc "import", "import"
-		subcommand "import", Import
+#		desc "import", "import"
+#		subcommand "import", Import
 
 		desc "xml", "xml"
 		subcommand "xml", Xml
